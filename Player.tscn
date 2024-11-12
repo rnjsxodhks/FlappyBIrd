@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://cveeov2fjhuln"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_s0idd"]
+[ext_resource type="Texture2D" uid="uid://ct8vcsf57d4dl" path="res://Flappy Bird Assets/Player/StyleBird1/Bird1-1.png" id="2_h6ls3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e7mca"]
+radius = 6.0
+
+[node name="Player" type="RigidBody2D"]
+position = Vector2(59, 58)
+script = ExtResource("1_s0idd")
+velocity = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_h6ls3")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="JumpTimer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 9)
+shape = SubResource("CircleShape2D_e7mca")
+
+[node name="UpBorder" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(8, 3)
+scale = Vector2(0.7, 0.05)
+
+[node name="DownBorder" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(8, 15)
+scale = Vector2(0.7, 0.05)
+
+[node name="Frame" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="timeout" from="JumpTimer" to="." method="_on_jump_timer_timeout"]
+[connection signal="screen_exited" from="UpBorder" to="." method="die"]
+[connection signal="screen_exited" from="DownBorder" to="." method="die"]
+[connection signal="timeout" from="Frame" to="." method="_on_frame_timeout"]

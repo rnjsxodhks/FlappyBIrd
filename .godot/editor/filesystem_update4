@@ -1,0 +1,10 @@
+res://Main.tscn
+res://Player.tscn
+res://obstacle.tscn
+res://score_manager.gd
+res://obstacle.gd
+res://player.gd
+res://score.gd
+res://popup.gd
+res://obstacles_generator.gd
+res://background.gd

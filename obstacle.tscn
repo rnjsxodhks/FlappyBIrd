@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://cm1bkku7cpk53"]
+
+[ext_resource type="Script" path="res://obstacle.gd" id="1_76i26"]
+[ext_resource type="Texture2D" uid="uid://chnlanqx3afu4" path="res://Flappy Bird Assets/Tiles/Style 4/PipeStyle4.png" id="1_b6wvk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_duegf"]
+size = Vector2(32, 166)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxvlo"]
+size = Vector2(32, 168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_birc7"]
+size = Vector2(4, 99)
+
+[node name="Obstacle" type="Node2D" groups=["Obstacle"]]
+script = ExtResource("1_76i26")
+
+[node name="Upper" type="Area2D" parent="."]
+position = Vector2(0, -50)
+
+[node name="Sprite2D" type="Sprite2D" parent="Upper"]
+texture = ExtResource("1_b6wvk")
+centered = false
+offset = Vector2(0, -8)
+hframes = 4
+vframes = 6
+frame = 8
+
+[node name="Sprite2D2" type="Sprite2D" parent="Upper/Sprite2D"]
+position = Vector2(0, -85)
+scale = Vector2(1, 10)
+texture = ExtResource("1_b6wvk")
+centered = false
+offset = Vector2(0, -8)
+hframes = 4
+vframes = 6
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Upper"]
+position = Vector2(16, -82)
+shape = SubResource("RectangleShape2D_duegf")
+
+[node name="Lower" type="Area2D" parent="."]
+position = Vector2(0, 50)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Lower"]
+position = Vector2(0, -16)
+texture = ExtResource("1_b6wvk")
+centered = false
+offset = Vector2(0, 8)
+hframes = 4
+vframes = 6
+
+[node name="Sprite2D2" type="Sprite2D" parent="Lower/Sprite2D2"]
+position = Vector2(0, -56)
+scale = Vector2(1, 10)
+texture = ExtResource("1_b6wvk")
+centered = false
+offset = Vector2(0, 8)
+hframes = 4
+vframes = 6
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lower"]
+position = Vector2(16, 84)
+shape = SubResource("RectangleShape2D_lxvlo")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(30, 0)
+
+[node name="Score" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Score"]
+position = Vector2(32, 0.5)
+shape = SubResource("RectangleShape2D_birc7")
+
+[connection signal="body_entered" from="Upper" to="." method="_on_upper_body_entered"]
+[connection signal="body_entered" from="Lower" to="." method="_on_lower_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="body_exited" from="Score" to="." method="_on_score_body_exited"]

@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=3 uid="uid://u1ecnkeqxmn4"]
+
+[ext_resource type="Texture2D" uid="uid://dqaf0lrnh8usi" path="res://Flappy Bird Assets/Background/Background1.png" id="1_bh4al"]
+[ext_resource type="PackedScene" uid="uid://cveeov2fjhuln" path="res://Player.tscn" id="1_ec4fs"]
+[ext_resource type="Script" path="res://background.gd" id="2_uq7ux"]
+[ext_resource type="Script" path="res://obstacles_generator.gd" id="3_rvnow"]
+[ext_resource type="Script" path="res://score.gd" id="5_m8st2"]
+[ext_resource type="Script" path="res://popup.gd" id="6_j83xt"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vaah8"]
+
+[node name="Main" type="Node"]
+
+[node name="Background" type="Sprite2D" parent="." groups=["BG"]]
+texture_repeat = 2
+texture = ExtResource("1_bh4al")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 280, 180)
+script = ExtResource("2_uq7ux")
+
+[node name="Obstacles" type="Node2D" parent="."]
+position = Vector2(285, 90)
+script = ExtResource("3_rvnow")
+
+[node name="Timer" type="Timer" parent="Obstacles"]
+wait_time = 3.0
+autostart = true
+
+[node name="VeloTimer" type="Timer" parent="Obstacles"]
+wait_time = 3.0
+autostart = true
+
+[node name="Player" parent="." instance=ExtResource("1_ec4fs")]
+unique_name_in_owner = true
+position = Vector2(39, 83)
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+horizontal_alignment = 1
+script = ExtResource("5_m8st2")
+
+[node name="Popup" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_vaah8")
+script = ExtResource("6_j83xt")
+
+[node name="Label" type="Label" parent="Popup"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="Popup"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -48.0
+offset_right = 31.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "restart"
+
+[connection signal="timeout" from="Obstacles/Timer" to="Obstacles" method="_on_timer_timeout"]
+[connection signal="timeout" from="Obstacles/VeloTimer" to="Background" method="_on_velo_timer_timeout"]
+[connection signal="timeout" from="Obstacles/VeloTimer" to="Obstacles" method="_on_velo_timer_timeout"]
+[connection signal="dead" from="Player" to="Obstacles" method="stop_generation"]
+[connection signal="dead" from="Player" to="Popup" method="display"]
+[connection signal="button_up" from="Popup/Button" to="Popup" method="_on_re_button_up"]

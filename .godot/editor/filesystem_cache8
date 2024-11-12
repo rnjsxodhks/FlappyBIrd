@@ -1,0 +1,67 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1731059686
+background.gd::GDScript::-1::1730455878::0::1::::<>Sprite2D<>::
+icon.svg::CompressedTexture2D::3046402123205298098::1729937318::1729937331::1::::<><>::
+Main.tscn::PackedScene::1457697832380714943::1730461405::0::1::::<><>::uid://dqaf0lrnh8usi::::res://Flappy Bird Assets/Background/Background1.png<>uid://cveeov2fjhuln::::res://Player.tscn<>res://background.gd<>uid://cm1bkku7cpk53::::res://obstacle.tscn<>res://obstacles_generator.gd
+obstacle.gd::GDScript::-1::1730460131::0::1::::<>Node2D<>::
+obstacle.tscn::PackedScene::5668860445166758488::1730461313::0::1::::<><>::res://obstacle.gd<>uid://chnlanqx3afu4::::res://Flappy Bird Assets/Tiles/Style 4/PipeStyle4.png
+obstacles_generator.gd::GDScript::-1::1730461259::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1730461310::0::1::::<>RigidBody2D<>::
+Player.tscn::PackedScene::6255333608826430715::1730461313::0::1::::<><>::res://player.gd<>uid://ct8vcsf57d4dl::::res://Flappy Bird Assets/Player/StyleBird1/Bird1-1.png
+::res://Flappy Bird Assets/::1730163937
+demo-img-1.png::CompressedTexture2D::8924237047422198329::1625123672::1729941922::1::::<><>::
+demo-img-2.png::CompressedTexture2D::4383601498547456087::1643094008::1729941922::1::::<><>::
+demo-img-3.png::CompressedTexture2D::6522912439580119729::1642324310::1729941922::1::::<><>::
+demo-img-4.png::CompressedTexture2D::8948451144984718450::1700740298::1729941922::1::::<><>::
+readme.txt::TextFile::-1::1700741200::0::1::::<><>::
+::res://Flappy Bird Assets/Background/::1729941922
+Background1.png::CompressedTexture2D::8282632383719138324::1625122092::1729941922::1::::<><>::
+Background2.png::CompressedTexture2D::3231356629090439707::1625122110::1729941922::1::::<><>::
+Background3.png::CompressedTexture2D::4718627210181769205::1625122124::1729941922::1::::<><>::
+Background4.png::CompressedTexture2D::7287388867460810520::1625122138::1729941922::1::::<><>::
+Background5.png::CompressedTexture2D::3977215176157073009::1625122176::1729941922::1::::<><>::
+Background6-Sheet.png::CompressedTexture2D::1452088012265583092::1663568970::1729941922::1::::<><>::
+Background6.png::CompressedTexture2D::1169766139710864635::1642323162::1729941922::1::::<><>::
+Background7.png::CompressedTexture2D::8023084939028080742::1700736150::1729941922::1::::<><>::
+Background8.png::CompressedTexture2D::8881750348138579806::1700736162::1729941922::1::::<><>::
+Background9.png::CompressedTexture2D::732434752691104399::1700736170::1729941922::1::::<><>::
+::res://Flappy Bird Assets/Player/::1729941840
+::res://Flappy Bird Assets/Player/StyleBird1/::1729941922
+AllBird1.png::CompressedTexture2D::7024764589858029711::1700738960::1729941922::1::::<><>::
+Bird1-1.png::CompressedTexture2D::6175833445378997245::1700738990::1729941922::1::::<><>::
+Bird1-2.png::CompressedTexture2D::6430652384205217932::1700738990::1729941922::1::::<><>::
+Bird1-3.png::CompressedTexture2D::3356202008515366472::1700738990::1729941922::1::::<><>::
+Bird1-4.png::CompressedTexture2D::3981734192505488286::1700738990::1729941922::1::::<><>::
+Bird1-5.png::CompressedTexture2D::3391423590852399541::1700738990::1729941922::1::::<><>::
+Bird1-6.png::CompressedTexture2D::7254069690103500463::1700738990::1729941922::1::::<><>::
+Bird1-7.png::CompressedTexture2D::218944267132178286::1700738990::1729941922::1::::<><>::
+::res://Flappy Bird Assets/Player/StyleBird2/::1729941922
+AllBird2.png::CompressedTexture2D::8959636798172644481::1700738616::1729941922::1::::<><>::
+Bird2-1.png::CompressedTexture2D::7959400046410309250::1700738664::1729941922::1::::<><>::
+Bird2-2.png::CompressedTexture2D::6755564941515449040::1700738664::1729941922::1::::<><>::
+Bird2-3.png::CompressedTexture2D::2284130284154660067::1700738664::1729941922::1::::<><>::
+Bird2-4.png::CompressedTexture2D::348421714330999761::1700738664::1729941922::1::::<><>::
+Bird2-5.png::CompressedTexture2D::1779232932455301809::1700738664::1729941922::1::::<><>::
+Bird2-6.png::CompressedTexture2D::2770872230495925653::1700738664::1729941922::1::::<><>::
+Bird2-7.png::CompressedTexture2D::2754932410145706426::1700738664::1729941922::1::::<><>::
+::res://Flappy Bird Assets/Tiles/::1729941840
+::res://Flappy Bird Assets/Tiles/Style 1/::1729941922
+PipeStyle1.png::CompressedTexture2D::5813187776721900707::1643092902::1729941922::1::::<><>::
+SimpleStyle1.png::CompressedTexture2D::3859892060548679101::1625122846::1729941922::1::::<><>::
+TileStyle1.png::CompressedTexture2D::7589968214511499880::1643092694::1729941922::1::::<><>::
+::res://Flappy Bird Assets/Tiles/Style 2/::1729941922
+PipeStyle2.png::CompressedTexture2D::2239940824017346885::1643092566::1729941922::1::::<><>::
+SimpleStyle2.png::CompressedTexture2D::6948359993611515258::1643092936::1729941922::1::::<><>::
+TileStyle2.png::CompressedTexture2D::1391732344090324971::1643091798::1729941922::1::::<><>::
+::res://Flappy Bird Assets/Tiles/Style 3/::1729941922
+PipeStyle3.png::CompressedTexture2D::1692895374004434524::1643093864::1729941922::1::::<><>::
+SimpleStyle3.png::CompressedTexture2D::7165035444517988019::1642320752::1729941922::1::::<><>::
+TileStyle3.png::CompressedTexture2D::770013101601665727::1643093660::1729941922::1::::<><>::
+::res://Flappy Bird Assets/Tiles/Style 4/::1729941922
+PipeStyle4.png::CompressedTexture2D::5291668779178498169::1691562028::1729941922::1::::<><>::
+SimpleStyle4.png::CompressedTexture2D::6637112973631944563::1691561680::1729941922::1::::<><>::
+TileStyle4.png::CompressedTexture2D::2612469595271780985::1691562352::1729941922::1::::<><>::
+::res://Flappy Bird Assets/Tiles/Style 5/::1729941922
+PipeStyle5.png::CompressedTexture2D::1979953918185910884::1700734492::1729941922::1::::<><>::
+SimpleStyle5.png::CompressedTexture2D::4805021934883545952::1700734522::1729941922::1::::<><>::
+TileStyle5.png::CompressedTexture2D::7952550221386407774::1700734546::1729941922::1::::<><>::
